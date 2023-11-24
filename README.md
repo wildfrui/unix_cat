@@ -15,5 +15,5 @@ cat is a standard Unix utility that reads files sequentially, writing them to st
 2. cd unix_cat
 3. gcc -o cat cat.c
 4. Use it like an original cat command:
-### ./cat -v text.txt
-### ./cat -benst text.txt
+##### ./cat -v text.txt
+##### ./cat -benst text.txt
