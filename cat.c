@@ -54,13 +54,13 @@ void print_files(int argc, char **argv, Opts options) {
       FILE *cur_file = fopen(argv[optind], "r");
       if (cur_file != NULL) {
         process_file(cur_file, options);
+        fclose(cur_file);
         optind++;
       } else {
         fprintf(stderr, "cat: %s: %s", argv[optind],
                 "No such file or directory\n");
         optind++;
-      }
-      fclose(cur_file);
+      } 
     }
   } else {
     fputs("usage: cat [-benst] [file ...]", stderr);
